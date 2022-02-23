@@ -1,0 +1,17 @@
+<h2 style="background-color:yellow;">Products</h2>
+
+<div *ngFor="let kaviya of product">
+  <h3 style="background-color:purple;">
+    <!-- property binding -->
+    <a [title]="kaviya.name + ' details'">
+      <!-- string interpolation (data binding) -->
+      {{ kaviya.name }}
+    </a>
+  </h3>
+  <!-- structural directive -->
+  <p *ngIf="kaviya.description">Description: {{ kaviya.description }}</p>
+  <!-- event binding -->
+  <button type="button" (click)="share()" style="background-color:coral;">Share</button>
+  &nbsp;
+  <button type="button" (click)="buy()"style="background-color:DodgerBlue;">Buy</button>
+</div>
